@@ -1,0 +1,224 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,500;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+html{
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #1d1d1d;
+    color: azure;
+}
+/* similar classes */
+.container{
+    max-width: 1200px;
+    margin: auto;
+
+}
+/* navbar */
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.logo{
+    width: 10rem;
+    border-radius: 50%;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    padding: 50px 20px;
+    text-transform: capitalize;
+}
+.menu li a{
+    position: relative;
+    text-shadow: 3px 3px 10px #ecf0f1;
+}
+.menu li a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width:0%;
+    background-color: crimson;
+    transition: all 1s linear;
+}
+.menu li a:hover:before{
+    width: 100%;
+        background-color: rgb(255, 0, 51);
+}
+/* header */
+header{
+    width: 100%;
+    height: 75vh;
+    background-image: url(https://static.wixstatic.com/media/0fb6dc8a6cb74de287f9ba00051ec135.jpg);
+    background-size: cover;
+    background-position: center top;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+header::after{
+    content: "";
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: -1;
+}
+header h1{
+    font-size: 6.2rem;
+    font-weight: 600;
+}
+header h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    margin-top: 3px;
+}
+header a{
+    padding: 5px;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+    width: 73px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+/* about */
+.about{
+    width: 100%;
+    height: 100vh;
+}
+.left-section{
+    position: relative;
+    top: 83px;
+    left: 122px;
+    width: 50vw;
+    background-color: rgb(221, 221, 221);
+    color: black;
+    overflow: auto;
+    
+}
+.left-section .text{
+    font-size: 3rem;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+.left-section p{
+    margin: 70px 70px;
+    font-size: 1.3rem;
+    line-height: 40px;
+    font-weight: 400;
+}
+.right-image{
+    background-image: url(https://static.wixstatic.com/media/e04c5fcf6b684fd18511a17e74b1bde1.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 40vw;
+    height: 70vh;
+    position: absolute;
+    top: 800px;
+    right: 50px;
+}
+
+/* works */
+.work-h{
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px red;
+}
+.work{
+    display: flex;
+    justify-content: space-between;
+}
+.works{
+    width: 32%;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+}
+.works img{
+    width: 100%;
+}
+/* contact */
+.contact{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 30px;
+}
+.name,.email{
+    height: 60px;
+    width: 49%;
+    margin-top: 26px;
+    border-radius: 9px;
+    /* margin-right: 15px; */
+    border: 1px solid lightgray;
+    outline: none;
+    padding: 0 15px;
+    font-weight: 600;
+    color: #003EE9;
+}
+.subject,.discription{
+    width: calc(100% - 10px);
+    height: 60px;
+    margin-top: 15px;
+    border-radius: 9px;
+    border: 1px solid lightgray;
+    outline: none;
+    padding: 0 15px;
+    font-weight: 600;
+    color: #003EE9;
+}
+.btn-sendmss{
+    width: 40%;
+    height: 40px;
+    border: 2px solid crimson;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.9s ease-in-out;
+    margin-top: 13px;
+    margin-left: 4px;
+    text-transform: capitalize;
+}
+.btn-sendmss a{
+    color: #fff;
+
+}
+.btn-sendmss:hover{
+    color: #fff;
+    background-color: #F30037;
+    border-color: #F30037;
+}
+/* footer */
+footer{
+    background-color: #000000;
+    height: 30vh;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+}
